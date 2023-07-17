@@ -11,20 +11,19 @@
     </ul>
 
     <div class="tab-content">
-      <article role="tabpanel" class="tab-pane active" id="shell-windows">
+       <article role="tabpanel" class="tab-pane active" id="shell-windows">
         <ol>
           <li>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</li>
-          <li>Run the installer and follow the steps below:
+          <li>Run the installer and follow the steps below. You should be able to do it as a local user without any admin credentials.
             <ol>
               {% comment %} Git 2.29.1 Setup {% endcomment %}
               <li>
-                Click on "Next" four times (two times if you've previously
-                installed Git).  You don't need to change anything
+                Click on "Next" four times (two times if you've previously installed Git).  You don't need to change anything
                 in the Information, location, components, and start menu screens.
               </li>
               <li>
                 <strong>
-                  From the dropdown menu select "Use the Nano editor by default" (NOTE: you will need to scroll <emph>up</emph> to find it) and click on "Next".
+                  From the dropdown menu, "Choosing the default editor used by Git", select "Use the Nano editor by default" (NOTE: you will need to scroll <emph>up</emph> to find it) and click on "Next".
                 </strong>
               </li>
               {% comment %} Adjusting the name of the initial branch in new repositories {% endcomment %}
@@ -44,6 +43,9 @@
                 command line and also from 3rd-party software" option.)
               </li>
               {% comment %} Choosing the SSH executable {% endcomment %}
+ 	      <li>
+	      Select "Use bundled OpenSSH".
+	      </li>
               {% comment %} Choosing HTTPS transport backend {% endcomment %}
               <li>
 		Ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
@@ -65,7 +67,7 @@
 		Ensure that "Default (fast-forward or merge) is selected and click "Next"
               </li>
               <li>
-		Ensure that "Git Credential Manager <strong>Core</strong>" is selected and click on "Next".
+		Ensure that "Git Credential Manager" is selected and click on "Next".
               </li>
               <li>
 		Ensure that "Enable file system caching" is selected and click on "Next".
@@ -79,7 +81,7 @@
             </ol>
           </li>
           <li>
-            If your "HOME" environment variable is not set (or you didn't have a clean install):
+            If your "HOME" environment variable is not set (or you don't know what this is):
             <ol>
               <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press <kbd>Enter</kbd>)</li>
               <li>
